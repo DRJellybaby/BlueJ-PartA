@@ -2,9 +2,7 @@ LabClass co452Lab = new LabClass(5);
 Student student1 = new Student("Will D", "0001");
 Student student2 = new Student("Georgia F", "0002");
 Student student3 = new Student("James H", "0003");
-co452Lab.enrollStudent(student1);
-co452Lab.enrollStudent(student2);
-co452Lab.enrollStudent(student3);
+
 co452Lab.numberOfStudents()
     returned int 3
 co452Lab.setInstructor("Nicholas Day");
@@ -17,6 +15,8 @@ student2.getCredits()
 student3.getCredits()
     returned int 0
 student1.addCredits(44);
+student2.getCredits()
+    returned int 0
 student2.addCredits(44);
 student3.addCredits(12);
 student1.getCredits()
@@ -25,3 +25,19 @@ student2.getCredits()
     returned int 44
 student3.getCredits()
     returned int 12
+student1.print();
+Will D, student ID: 0001, credits: 44
+student2.print();
+Georgia F, student ID: 0002, credits: 44
+student3.print();
+James H, student ID: 0003, credits: 12
+co452Lab.enrollStudent(student1);
+co452Lab.enrollStudent(student2);
+co452Lab.enrollStudent(student3);
+labClass1.printList();
+Lab class Tuesday 29th September 2020
+Instructor: Nicholas Day   Room: G100
+Class list:
+Will D, student ID: 0001, credits: 44
+Georgia F, student ID: 0002, credits: 44
+James H, student ID: 0003, credits: 12

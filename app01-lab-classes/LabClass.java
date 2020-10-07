@@ -39,7 +39,7 @@ public class LabClass
     {
         if(students.size() == capacity) 
         {
-            System.out.println("The class is full, you cannot enroll.");
+            System.out.println("The class is full, you cannot enrol.");
         }
         else 
         {

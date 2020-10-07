@@ -1,24 +1,32 @@
-import java.util.*;
 
 /**
- * Write a description of class Course here.
+ * CLass for creation and storage of course data
  *
  * @author Will Deeley
- * @version 06/10/2020
+ * @version 07/10/2020
  */
 public class Course
 {
-    // the written name of the course
-    public String course;   
-    public String cID;
-    
+    // variable for the name of a course
+    private String title;
+    // variable for the ID code for a course
+    private String cID;
+
     /**
-     * Create a new Course with a given name and ID number.
+     * Constructor for the identifying details of a course (ID number and Name)
      */
-    public Course(String courseName, String courseID)
+    public Course(String title, String courseID)
     {
-        course = courseName;
+        // initialise instance variables
+        this.title = title;
         cID = courseID;
     }
-
+    
+    /**
+     * print the details of a course
+     */
+    public void print()
+    {
+        System.out.println ("Course: " + title + ", Course ID: " + cID);
+    }
 }

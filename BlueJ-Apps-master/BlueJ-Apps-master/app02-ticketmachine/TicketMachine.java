@@ -29,13 +29,6 @@ public class TicketMachine
         balance = 0;
         total = 0;
     }
-    
-    public TicketMachine()
-    {
-        price = 1000;
-        balance = 0;
-        total = 0;
-    }
 
     /**
      * @Return The price of a ticket.
@@ -69,11 +62,6 @@ public class TicketMachine
             System.out.println("Use a positive amount rather than: " +
                                amount);
         }
-    }
-    
-    public void empty()
-    {
-        total = 0;
     }
 
     /**

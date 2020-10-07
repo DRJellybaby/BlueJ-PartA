@@ -1,0 +1,6 @@
+Student student2 = new Student("Will D", "G100");
+Course course2 = new Course("Computing", "G100");
+student2.addCourse(course2);
+student2.print();
+Will D, student ID: G100, credits: 0
+Course: Computing, Course ID: G100

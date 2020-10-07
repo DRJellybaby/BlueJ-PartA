@@ -6,7 +6,6 @@ import java.util.*;
  * 
  * @author Michael Kölling and David Barnes
  * @version 2016.02.29
- * 
  */
 public class Student
 {
@@ -17,10 +16,6 @@ public class Student
     // the amount of credits for study taken so far
     private int credits;
     
-    private ArrayList<Course> course;
-    private ArrayList<Course> cID;
-    
-    
     /**
      * Create a new student with a given name and ID number.
      */
@@ -29,7 +24,6 @@ public class Student
         name = fullName;
         id = studentID;
         credits = 0;
-        course = new ArrayList<Course>();       
     }
 
     /**
@@ -64,6 +58,7 @@ public class Student
         credits += additionalPoints;
     }
 
+    
     /**
      * Return the number of credit points this student has accumulated.
      */
@@ -83,18 +78,10 @@ public class Student
     }
     
     /**
-     * Add a Course to a Student
-     */
-    public void enrollStudent(Course courseName)
-    {
-         course.add(courseName);
-    }
-    
-    /**
      * Print the student's name and ID number to the output terminal.
      */
     public void print()
     {
-        System.out.println(name + ", student ID: " + id + ", credits: " + credits + ", Course:" + course + " " + cID);
+        System.out.println(name + ", student ID: " + id + ", credits: " + credits);
     }
 }
