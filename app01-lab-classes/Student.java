@@ -8,7 +8,7 @@ import java.util.*;
  * @version 2016.02.29
  * 
  * Edits made by William Deeley: 07/10/2020
- * Added call for Course class and method it "enroll" student in the course
+ * Added call for Course class and method to "enroll" student in the course
  */
 public class Student
 {

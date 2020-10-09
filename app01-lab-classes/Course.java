@@ -7,9 +7,8 @@
  */
 public class Course
 {
-    // variable for the name of a course
+    // Attributes for course Details (name and ID respectivly)
     private String title;
-    // variable for the ID code for a course
     private String cID;
 
     /**
@@ -17,7 +16,6 @@ public class Course
      */
     public Course(String title, String courseID)
     {
-        // initialise instance variables
         this.title = title;
         cID = courseID;
     }
