@@ -9,7 +9,8 @@
  * @author David J. Barnes and Michael Kölling
  * @version 2016.02.29
  * 
- * Modified by Student Name
+ * Modified by William Deeley
+ * 09/10/2020
  */
 public class TicketMachine
 {
@@ -19,6 +20,11 @@ public class TicketMachine
     private int balance;
     // The total amount of money collected by this machine.
     private int total;
+    
+    private Ticket ticket;
+    private Ticket ticketCost;
+    private Ticket destination;
+
 
     /**
      * Create a machine that issues tickets of the given price.
@@ -29,14 +35,12 @@ public class TicketMachine
         balance = 0;
         total = 0;
     }
-    
-    public TicketMachine()
-    {
-        price = 1000;
-        balance = 0;
-        total = 0;
-    }
 
+    public int getCost()
+    {
+        return ticketCost;
+    }
+    
     /**
      * @Return The price of a ticket.
      */
@@ -52,6 +56,12 @@ public class TicketMachine
     public int getBalance()
     {
         return balance;
+    }
+    
+    public void chooseDestination(Ticket destination)
+    {
+        this.destination = destination;
+        price = ticketCost;
     }
 
     /**
@@ -87,9 +97,10 @@ public class TicketMachine
         {
             // Simulate the printing of a ticket.
             System.out.println("##################");
-            System.out.println("# The BlueJ Line");
-            System.out.println("# Ticket");
+            System.out.println("# The Blue Line");
+            System.out.println("# Ticket:");
             System.out.println("# " + price + " cents.");
+            System.out.println(java.time.LocalDate.now());  
             System.out.println("##################");
             System.out.println();
 
