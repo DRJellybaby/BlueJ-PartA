@@ -21,12 +21,14 @@ public class TicketMachine
     // The total amount of money collected by this machine.
     private int total;
     
-    private Ticket ticket;
+    private Ticket selectTicket;
    
     //The Pre-avalible stops
     private Ticket maidenheadTicket;
     private Ticket sloughTicket;
     private Ticket readingTicket;
+        
+    private Coin coin;
    
     /**
      * Create a machine that issues tickets of the given price.
@@ -37,7 +39,7 @@ public class TicketMachine
         balance = 0;
         total = 0;
         
-        ticket = null;
+        selectTicket = null;
         maidenheadTicket = new Ticket("Maidenhead" , 220);
         sloughTicket = new Ticket("Slough" , 300);
         readingTicket = new Ticket("Reading" , 330);
@@ -49,6 +51,32 @@ public class TicketMachine
     public int getPrice()
     {
         return price;
+    }
+    
+    public void selectTicket(String destination)
+    {
+        if (destination == "Maidenhead")
+        {
+            selectTicket = maidenheadTicket;
+            System.out.println("Selected Maidenhead:");
+            System.out.println("Price: " + price);
+        }
+        else if (destination == "Slough")
+        {
+            selectTicket = sloughTicket;
+            System.out.println("Selected Slough:");
+            System.out.println("Price: " + price);
+        }
+        else if (destination == "Reading")
+        {
+            selectTicket = readingTicket;
+            System.out.println("Selected Reading:");
+            System.out.println("Price: " + price);
+        }
+        else
+        {
+            System.out.println("please enter a valid destination: Maidenhead, Slough or Reading");
+        }
     }
 
     /**
@@ -87,7 +115,12 @@ public class TicketMachine
         if(balance >= price) 
         {
             // Simulate the printing of a ticket.
-            ticket.printTicket();
+            System.out.println("##################");
+            System.out.println("# The BlueJ Line");
+            System.out.println("# Ticket");
+            System.out.println("# " + price + " cents.");
+            System.out.println("##################");
+            System.out.println();
 
             // Update the total collected with the price.
             total = total + price;
