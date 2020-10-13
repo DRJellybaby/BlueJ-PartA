@@ -21,13 +21,15 @@ public class TicketMachine
     // The total amount of money collected by this machine.
     private int total;
     
+    private String destination;
+    //variable to store the selected intended destination
     private Ticket selectTicket;
    
     //The Pre-avalible stops
     private Ticket maidenheadTicket;
     private Ticket sloughTicket;
     private Ticket readingTicket;
-        
+     
     private Coin coin;
    
     /**
@@ -53,23 +55,29 @@ public class TicketMachine
         return price;
     }
     
+    /**
+     * querie to varify if the users intended destination is valid.
+     */
     public void selectTicket(String destination)
     {
         if (destination == "Maidenhead")
         {
             selectTicket = maidenheadTicket;
+            this.destination = destination;
             System.out.println("Selected Maidenhead:");
             System.out.println("Price: " + price);
         }
         else if (destination == "Slough")
         {
             selectTicket = sloughTicket;
+            this.destination = destination;
             System.out.println("Selected Slough:");
             System.out.println("Price: " + price);
         }
         else if (destination == "Reading")
         {
             selectTicket = readingTicket;
+            this.destination = destination;
             System.out.println("Selected Reading:");
             System.out.println("Price: " + price);
         }
@@ -118,6 +126,7 @@ public class TicketMachine
             System.out.println("##################");
             System.out.println("# The BlueJ Line");
             System.out.println("# Ticket");
+            System.out.println("#Destination: " + destination);
             System.out.println("# " + price + " cents.");
             System.out.println("##################");
             System.out.println();

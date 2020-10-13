@@ -1,13 +1,18 @@
+import java.util.Date;
 /**
- * Write a description of class Ticket here.
+ * This class details, creates and stores all relivent info for stops along a route
  *
  * Will Deeley
  * 13/10/2020
  */
 public class Ticket
 {
+    //tickets indended endpoint
     private String destination;
+    //a tickets intended cost
     private int cost;
+    //current date at time of printing
+    private Date currentDate = new Date();
 
     /**
      * Constructor for objects of class ticket

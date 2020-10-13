@@ -1,9 +1,10 @@
 
 /**
- * Write a description of class Coin here.
- *
- * @author (your name)
- * @version (a version number or a date)
+ * Class to varify if entered currency is valis
+ * Currently not avalible
+ * 
+ * Will Deeley
+ * 13/10/2020
  */
 public enum Coin
     {
