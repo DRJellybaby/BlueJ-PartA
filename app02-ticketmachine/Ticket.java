@@ -1,36 +1,37 @@
+
+import java.util.Date;
+import java.util.Date;
 import java.util.Date;
 /**
- * This class details, creates and stores all relivent info for stops along a route
+ * Class for creation of ticket and storage of related data
  *
- * Will Deeley
- * 13/10/2020
+ * Edited by Will Deeley
+ * 18/10/2020
  */
 public class Ticket
 {
-    //tickets indended endpoint
+    // Ticket attributes, including stop (destination) price (cost) and the current date details
     private String destination;
-    //a tickets intended cost
-    private int cost;
-    //current date at time of printing
-    private Date currentDate = new Date();
+    public int cost;
+    private Date date;
 
     /**
-     * Constructor for objects of class ticket
+     * Constructor for objects of class Ticket
      */
     public Ticket(String destination, int cost)
     {
+        // initialise instance variables
         this.destination = destination;
         this.cost = cost;
+        date = new Date();
     }
-
-    public void printTicket()
+   
+    public void print()
     {
-            System.out.println("##################");
-            System.out.println("# The " + destination + " Line");
-            System.out.println("# Ticket");
-            System.out.println("# " + cost + " cents.");
-            System.out.println(java.time.LocalDate.now());
-            System.out.println("##################");
-            System.out.println();
-    }
+        System.out.println("#############################");
+        System.out.println("Ticket: " + destination);
+        System.out.println("Cost: " + cost);
+        System.out.println("Issued: " + date);
+        System.out.println("#############################");
+   }
 }
