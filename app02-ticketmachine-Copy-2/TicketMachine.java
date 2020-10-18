@@ -9,8 +9,8 @@
  * @author David J. Barnes and Michael Kölling
  * @version 2016.02.29
  * 
- * Edited by Will Deeley
- * 18/10/2020
+ * Modified by Will Deeley
+ * 13/10/2020
  */
 public class TicketMachine
 {
@@ -21,17 +21,17 @@ public class TicketMachine
     // The total amount of money collected by this machine.
     private int total;
     
-    //Variables for pre set destinations
-    private Ticket destination;
-    private Ticket cost;
-    private Ticket date;
-    private Ticket ticket;
-    
-    private Ticket issuedTicket;
-    private Ticket readingTicket;
+    private String destination;
+    //variable to store the selected intended destination
+    private Ticket selectTicket;
+   
+    //The Pre-avalible stops
     private Ticket maidenheadTicket;
     private Ticket sloughTicket;
-
+    private Ticket readingTicket;
+     
+    private Coin coin;
+   
     /**
      * Create a machine that issues tickets of the given price.
      */
@@ -40,47 +40,51 @@ public class TicketMachine
         price = cost;
         balance = 0;
         total = 0;
-        //pre defined tickets
-        readingTicket = new Ticket("Reading", 170);
-        maidenheadTicket = new Ticket("Maidenhead", 220);
-        sloughTicket = new Ticket("Slough", 270);
+        
+        selectTicket = null;
+        maidenheadTicket = new Ticket("Maidenhead" , 220);
+        sloughTicket = new Ticket("Slough" , 300);
+        readingTicket = new Ticket("Reading" , 330);
     }
     
-    /**
-     * Select a ticket from the predefined list
-     */
-    public void destination(String stop)
-    {
-          if (stop == "Maidenhead")
-          {
-              issuedTicket = maidenheadTicket;
-              price = maidenheadTicket.cost;
-          }
-          else if (stop == "Slough")
-          {
-              issuedTicket = sloughTicket;
-              price = sloughTicket.cost;
-          }
-          else if (stop == "Reading")
-          {
-              issuedTicket = readingTicket;
-              price = readingTicket.cost;
-          }
-          else
-          {
-              System.out.println("Please enter a valid Destination:");
-              System.out.println("Reading");
-              System.out.println("Maidenhead");
-              System.out.println("Slough");
-          }
-    }
-
     /**
      * @Return The price of a ticket.
      */
     public int getPrice()
     {
         return price;
+    }
+    
+    /**
+     * querie to varify if the users intended destination is valid.
+     */
+    public void selectTicket(String destination)
+    {
+        if (destination == "Maidenhead")
+        {
+            selectTicket = maidenheadTicket;
+            this.destination = destination;
+            System.out.println("Selected Maidenhead:");
+            System.out.println("Price: " + price);
+        }
+        else if (destination == "Slough")
+        {
+            selectTicket = sloughTicket;
+            this.destination = destination;
+            System.out.println("Selected Slough:");
+            System.out.println("Price: " + price);
+        }
+        else if (destination == "Reading")
+        {
+            selectTicket = readingTicket;
+            this.destination = destination;
+            System.out.println("Selected Reading:");
+            System.out.println("Price: " + price);
+        }
+        else
+        {
+            System.out.println("please enter a valid destination: Maidenhead, Slough or Reading");
+        }
     }
 
     /**
@@ -108,17 +112,6 @@ public class TicketMachine
                                amount);
         }
     }
-    
-    /**
-     * Check that the amount is sensible.
-     */
-    public void printSelectedTicket()
-    {
-        if(balance >= price) 
-        {
-            issuedTicket.print();
-        }
-    }
 
     /**
      * Print a ticket if enough money has been inserted, and
@@ -133,6 +126,7 @@ public class TicketMachine
             System.out.println("##################");
             System.out.println("# The BlueJ Line");
             System.out.println("# Ticket");
+            System.out.println("#Destination: " + destination);
             System.out.println("# " + price + " cents.");
             System.out.println("##################");
             System.out.println();
@@ -150,18 +144,6 @@ public class TicketMachine
         }
     }
 
-    /** print all Avalible Tickets
-     */ 
-    public void printAllTickets()
-    {
-       System.out.println("The following tickets are avalible:");
-       maidenheadTicket.print();
-       System.out.println("===================================");
-       readingTicket.print();
-       System.out.println("===================================");
-       sloughTicket.print();
-    }
-        
     /**
      * Return the money in the balance.
      * The balance is cleared.

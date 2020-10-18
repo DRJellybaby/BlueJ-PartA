@@ -1,7 +1,5 @@
+import java.util.Date;
 
-import java.util.Date;
-import java.util.Date;
-import java.util.Date;
 /**
  * Class for creation of ticket and storage of related data
  *
@@ -11,7 +9,7 @@ import java.util.Date;
 public class Ticket
 {
     // Ticket attributes, including stop (destination) price (cost) and the current date details
-    private String destination;
+    public String destination;
     public int cost;
     private Date date;
 
@@ -29,9 +27,10 @@ public class Ticket
     public void print()
     {
         System.out.println("#############################");
-        System.out.println("Ticket: " + destination);
-        System.out.println("Cost: " + cost);
-        System.out.println("Issued: " + date);
+        System.out.println("# the BlueJ line");
+        System.out.println("# Ticket: " + destination);
+        System.out.println("# Cost: " + cost);
+        System.out.println("# Issued: " + date);
         System.out.println("#############################");
    }
 }
