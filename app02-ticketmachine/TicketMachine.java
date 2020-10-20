@@ -21,16 +21,13 @@ public class TicketMachine
     // The total amount of money collected by this machine.
     private int total;
     
-    //Variables for pre set destinations
-    private Ticket destination;
-    private Ticket cost;
-    private Ticket date;
-    private Ticket ticket;
-    
+    //pre-set destinations
     private Ticket issuedTicket;
     private Ticket readingTicket;
     private Ticket maidenheadTicket;
     private Ticket sloughTicket;
+    
+    private Coin coin;
 
     /**
      * Create a machine that issues tickets of the given price.
@@ -49,19 +46,19 @@ public class TicketMachine
     /**
      * Select a ticket from the predefined list
      */
-    public void destination(String stop)
+    public void selectDestination(String stop)
     {
-          if (stop == "Maidenhead")
+          if (stop == "Maidenhead" || stop == "maidenhead")
           {
               issuedTicket = maidenheadTicket;
               price = maidenheadTicket.cost;
           }
-          else if (stop == "Slough")
+          else if (stop == "Slough"|| stop == "slough")
           {
               issuedTicket = sloughTicket;
               price = sloughTicket.cost;
           }
-          else if (stop == "Reading")
+          else if (stop == "Reading" || stop == "reading")
           {
               issuedTicket = readingTicket;
               price = readingTicket.cost;
@@ -98,15 +95,40 @@ public class TicketMachine
      */
     public void insertMoney(int amount)
     {
-        if(amount > 0) 
+        if(amount > 0 )
         {
             balance = balance + amount;
         }
         else 
         {
-            System.out.println("Use a positive amount rather than: " +
-                               amount);
+            System.out.println("Use a positive amount rather than: " + amount);
         }
+    }
+    
+    /**
+     * Methods for inserting defined coins and displaying current total balance
+     */
+    public void insert10p()
+    {
+        printBalance(10);
+    }
+    public void insert20p()
+    {
+        printBalance(20);
+    }
+    public void insert£1()
+    {
+        printBalance(100);
+    }
+    public void insert£2()
+    {
+        printBalance(200);
+    }
+    public void printBalance(int amount)
+    {
+        balance = balance + amount;
+        System.out.println("you have inserted " + amount );
+        System.out.println("current balance = " + balance );
     }
     
     /**
@@ -117,6 +139,11 @@ public class TicketMachine
         if(balance >= price) 
         {
             issuedTicket.print();
+        }
+        else
+        {
+            System.out.println("please enter more money");
+            System.out.println("Currently missing: " + (price - balance));
         }
     }
 
@@ -156,9 +183,7 @@ public class TicketMachine
     {
        System.out.println("The following tickets are avalible:");
        maidenheadTicket.print();
-       System.out.println("===================================");
        readingTicket.print();
-       System.out.println("===================================");
        sloughTicket.print();
     }
         

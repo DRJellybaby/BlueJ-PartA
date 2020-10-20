@@ -1,4 +1,5 @@
 import java.util.Date;
+import java.text.SimpleDateFormat;
 
 /**
  * Class for creation of ticket and storage of related data
@@ -11,6 +12,7 @@ public class Ticket
     // Ticket attributes, including stop (destination) price (cost) and the current date details
     public String destination;
     public int cost;
+    // private SimpleDateFormat formatter = new SimpleDateFormat("dd/MMM/yyyy");
     private Date date;
 
     /**
@@ -32,5 +34,6 @@ public class Ticket
         System.out.println("# Cost: " + cost);
         System.out.println("# Issued: " + date);
         System.out.println("#############################");
+        System.out.println("===================================");
    }
 }
