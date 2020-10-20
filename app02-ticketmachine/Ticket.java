@@ -3,6 +3,7 @@ import java.text.SimpleDateFormat;
 
 /**
  * Class for creation of ticket and storage of related data
+ * Tickets have a preset stop and price, that are set in the "TicketMachine" class
  *
  * Edited by Will Deeley
  * 18/10/2020
@@ -10,9 +11,8 @@ import java.text.SimpleDateFormat;
 public class Ticket
 {
     // Ticket attributes, including stop (destination) price (cost) and the current date details
-    public String destination;
+    private String destination;
     public int cost;
-    // private SimpleDateFormat formatter = new SimpleDateFormat("dd/MMM/yyyy");
     private Date date;
 
     /**
@@ -20,12 +20,14 @@ public class Ticket
      */
     public Ticket(String destination, int cost)
     {
-        // initialise instance variables
         this.destination = destination;
         this.cost = cost;
         date = new Date();
     }
    
+    /**
+     * Global print method for tickets
+     */
     public void print()
     {
         System.out.println("#############################");
@@ -35,5 +37,5 @@ public class Ticket
         System.out.println("# Issued: " + date);
         System.out.println("#############################");
         System.out.println("===================================");
-   }
+    }
 }

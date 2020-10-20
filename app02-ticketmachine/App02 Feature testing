@@ -1,0 +1,57 @@
+TicketMachine ticketMa1 = new TicketMachine(100);
+ticketMa1.printAllTickets();
+The following tickets are avalible:
+#############################
+# the BlueJ line
+# Ticket: Maidenhead
+# Cost: 220
+# Issued: Tue Oct 20 18:31:35 BST 2020
+#############################
+===================================
+#############################
+# the BlueJ line
+# Ticket: Reading
+# Cost: 170
+# Issued: Tue Oct 20 18:31:35 BST 2020
+#############################
+===================================
+#############################
+# the BlueJ line
+# Ticket: Slough
+# Cost: 270
+# Issued: Tue Oct 20 18:31:35 BST 2020
+#############################
+===================================
+ticketMa1.printSelectedTicket();
+Please select a valid Destination:
+Reading
+Maidenhead
+Slough
+ticketMa1.insert10p();
+you have inserted 10
+current balance = 10
+ticketMa1.insert20p();
+you have inserted 20
+current balance = 30
+ticketMa1.insert£1();
+you have inserted 100
+current balance = 130
+ticketMa1.insert£2();
+you have inserted 200
+current balance = 330
+ticketMa1.selectDestination("maidenhead");
+Maidenhead Selected
+ticketMa1.printSelectedTicket();
+#############################
+# the BlueJ line
+# Ticket: Maidenhead
+# Cost: 220
+# Issued: Tue Oct 20 18:31:35 BST 2020
+#############################
+===================================
+ticketMa1.getBalance()
+    returned int 110
+ticketMa1.refundBalance()
+    returned int 110
+ticketMa1.getBalance()
+    returned int 0

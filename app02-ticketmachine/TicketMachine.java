@@ -11,6 +11,8 @@
  * 
  * Edited by Will Deeley
  * 18/10/2020
+ * Added support for inserting spacific coins 
+ * Established preset destinations and the ability to print all avalible tickets
  */
 public class TicketMachine
 {
@@ -52,20 +54,23 @@ public class TicketMachine
           {
               issuedTicket = maidenheadTicket;
               price = maidenheadTicket.cost;
+              System.out.println("Maidenhead Selected");
           }
           else if (stop == "Slough"|| stop == "slough")
           {
               issuedTicket = sloughTicket;
               price = sloughTicket.cost;
+              System.out.println("Slough Selected");
           }
           else if (stop == "Reading" || stop == "reading")
           {
               issuedTicket = readingTicket;
               price = readingTicket.cost;
+              System.out.println("Reading Selected");
           }
           else
           {
-              System.out.println("Please enter a valid Destination:");
+              System.out.println("Please select a valid Destination:");
               System.out.println("Reading");
               System.out.println("Maidenhead");
               System.out.println("Slough");
@@ -105,6 +110,7 @@ public class TicketMachine
         }
     }
     
+    
     /**
      * Methods for inserting defined coins and displaying current total balance
      */
@@ -131,14 +137,21 @@ public class TicketMachine
         System.out.println("current balance = " + balance );
     }
     
+    
     /**
-     * Check that the amount is sensible.
+     * Check that the correct amount of money has been entered, and that a ticket has been selected.
+     * if correct, the ticket will be printed
      */
     public void printSelectedTicket()
     {
         if(balance >= price) 
         {
             issuedTicket.print();
+            balance = balance - issuedTicket.cost;
+        }
+        else if (issuedTicket == null)
+        {
+            selectDestination(null);
         }
         else
         {
@@ -177,7 +190,7 @@ public class TicketMachine
         }
     }
 
-    /** print all Avalible Tickets
+    /** print all Avalible Predefined Tickets
      */ 
     public void printAllTickets()
     {

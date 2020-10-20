@@ -2,8 +2,8 @@
 /**
  * Write a description of class Coin here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * Will Deeley
+ * 20/10/2020
  */
 public enum Coin
     {
