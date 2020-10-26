@@ -6,16 +6,24 @@ import java.util.*;
  * 
  * @author Michael Kölling and David Barnes
  * @version 2016.02.29
+ * 
+ * Edited: Will Deeley
+ * Version 24/10/2020
  */
 public class Student
 {
-    // the student's full name
-    private String name;
-    // the student ID
-    private String id;
-    // the amount of credits for study taken so far
-    private int credits;
+    // Attributes
     
+    private String name;
+
+    private String id;
+    
+    // A BSc course has 120 credits, each module has 15 Credits
+    private int credits;
+    // call for course details from the course class
+    private Course course;
+       
+
     /**
      * Create a new student with a given name and ID number.
      */
@@ -25,7 +33,15 @@ public class Student
         id = studentID;
         credits = 0;
     }
-
+    
+    /**
+     * Enroll (or assign) a Course to a student 
+     */
+    public void addCourse(Course course)
+    {
+        this.course = course;
+    }
+    
     /**
      * Return the full name of this student.
      */
@@ -58,7 +74,6 @@ public class Student
         credits += additionalPoints;
     }
 
-    
     /**
      * Return the number of credit points this student has accumulated.
      */
@@ -76,12 +91,14 @@ public class Student
     {
         return name.substring(0,4) + id.substring(0,3);
     }
-    
+
     /**
      * Print the student's name and ID number to the output terminal.
      */
     public void print()
     {
         System.out.println(name + ", student ID: " + id + ", credits: " + credits);
+        course.print();
     }
 }
+
