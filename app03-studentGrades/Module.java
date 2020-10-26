@@ -1,9 +1,9 @@
 
 /**
- * Write a description of class Module here.
+ * Class for creation and storage of modual data for within a course
  *
- * @author (your name)
- * @version (a version number or a date)
+ * Will Deely
+ * 26/10/2020
  */
 public class Module
 {
@@ -47,11 +47,17 @@ public class Module
         }
     }
 
+    /**
+     * Get method for modual mark
+     */
     public int getMark()
     {
         return modualMark;
     }
 
+    /**
+     * get method for moduale name
+     */
     public String getName()
     {
         return moduleName;

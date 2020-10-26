@@ -3,7 +3,9 @@
  * Class for creation and storage of course data
  *
  * @author Will Deeley
- * @version 24/10/2020
+ * @version 26/10/2020
+ * 
+ * added support for spacific moduals within the class
  */
 public class Course
 {
@@ -39,6 +41,9 @@ public class Course
         noModule = 0;
     }
 
+    /**
+     * Method to add a up to 4 moduals to a course
+     */
     public void addmodule(String moduleName, String moduleCode)
     {
         noModule ++;
@@ -61,6 +66,9 @@ public class Course
         setGrade();
     }
 
+    /**
+     * Method to change the mark of spacific moduals and update the over all grade to reflect
+     */
     public void changeMark(String moduleName, int mark)
     {
         if (moduleName == module1.getName())
@@ -86,6 +94,9 @@ public class Course
         setGrade();
     }
 
+    /**
+     * Method to find the average mark of the current modules and assign a appropriate grade
+     */
     public void setGrade()
     {
         finalMark = ((module1Mark + module2Mark + module3Mark + module4Mark) / 4);
@@ -112,13 +123,13 @@ public class Course
     }
     
     /**
-     * print the details of a course
+     * print the details of a course and its moduales
      */
     public void print()
     {
         if (noModule <= 3)
         {
-            System.out.println("please add additional modules");
+            System.out.println("A Course needs 4 moduals");
             System.out.println("Current number of modules: " + noModule);
         }
         else
