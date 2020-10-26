@@ -14,8 +14,6 @@ public class Module
 
     private int modualMark;
 
-    private boolean completed;
-
     /**
      * Constructor for objects of class Module
      */
@@ -24,11 +22,11 @@ public class Module
         moduleName = name;
         moduleCode = code;
         modualMark = 0;
-        completed = false;
     }
 
     /**
      * Method to change a students mark. checks mark is a valid pacentage (0-100)
+     * detects if the mark is a pass/fail mark
      */
     public void changeMark(int newMark)
     {
@@ -36,10 +34,6 @@ public class Module
         {
             modualMark = newMark;
             System.out.println("New mark for " + moduleName + " is: " + modualMark + "%");
-            if (newMark >=40)
-            {
-                completed = true;
-            }
         }
         else
         {
@@ -65,6 +59,7 @@ public class Module
 
     /**
      * method it print all the relivent details of a modual (name, ID and current mark)
+     * displays if the modual is a pass or fail
      */
     public void print()
     {
