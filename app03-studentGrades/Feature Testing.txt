@@ -1,0 +1,112 @@
+Student student1 = new Student("Will Deeley", "001714");
+Course course1 = new Course("Computing", "CO0001");
+student1.addCourse(course1);
+course1.addmodule("Programing", "CO452");
+course1.addmodule("Architecture", "CO450");
+student1.print();
+Will Deeley, student ID: 001714, credits: 0
+A Course needs 4 moduals
+Current number of modules: 2
+course1.addmodule("Game Design", "CO459");
+course1.addmodule("3D Modelling", "CO461");
+student1.print();
+Will Deeley, student ID: 001714, credits: 0
+Course: Computing, Course ID: CO0001
+========================================
+module Details:
+Name = Programing
+ID code = CO452
+Current Mark = 0%
+========================================
+module Details:
+Name = Architecture
+ID code = CO450
+Current Mark = 0%
+========================================
+module Details:
+Name = Game Design
+ID code = CO459
+Current Mark = 0%
+========================================
+module Details:
+Name = 3D Modelling
+ID code = CO461
+Current Mark = 0%
+========================================
+========================================
+Your grade is: F
+course1.changeMark("Programing", 75);
+New mark for Programing is: 75%
+course1.changeMark("Architecture", 34);
+New mark for Architecture is: 34%
+course1.changeMark("Game Design", 47);
+New mark for Game Design is: 47%
+course1.changeMark("3D Modelling", 71);
+New mark for 3D Modelling is: 71%
+student1.print();
+Will Deeley, student ID: 001714, credits: 0
+Course: Computing, Course ID: CO0001
+========================================
+module Details:
+Name = Programing
+ID code = CO452
+Current Mark = 75%
+========================================
+module Details:
+Name = Architecture
+ID code = CO450
+Current Mark = 34%
+========================================
+module Details:
+Name = Game Design
+ID code = CO459
+Current Mark = 47%
+========================================
+module Details:
+Name = 3D Modelling
+ID code = CO461
+Current Mark = 71%
+========================================
+========================================
+Your grade is: C
+course1.print();
+Course: Computing, Course ID: CO0001
+========================================
+module Details:
+Name = Programing
+ID code = CO452
+Current Mark = 75%
+========================================
+module Details:
+Name = Architecture
+ID code = CO450
+Current Mark = 34%
+========================================
+module Details:
+Name = Game Design
+ID code = CO459
+Current Mark = 47%
+========================================
+module Details:
+Name = 3D Modelling
+ID code = CO461
+Current Mark = 71%
+========================================
+========================================
+Your grade is: C
+course1.printModualDetails("Programing");
+========================================
+module Details:
+Name = Programing
+ID code = CO452
+Current Mark = 75%
+========================================
+course1.printModualDetails("Architecture");
+========================================
+module Details:
+Name = Programing
+ID code = CO450
+Current Mark = 34%
+========================================
+
+

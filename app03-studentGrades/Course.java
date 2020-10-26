@@ -63,6 +63,10 @@ public class Course
         {
             module4 = new Module(moduleName, moduleCode);
         }
+        else if (noModule == 5)
+        {
+            System.out.println ("This Course is at maximum modules");
+        }
         setGrade();
     }
 
@@ -119,6 +123,33 @@ public class Course
         else if ((finalMark <= 100) && (finalMark >= 70))
         {
             finalGrade = "A";
+        }
+    }
+    
+    /**
+     * Method to print individual Modual Details
+     */
+    public void printModualDetails(String moduleName)
+    {
+        if (moduleName == module1.getName())
+        {
+            System.out.println ("========================================");
+            module1.print();
+        }
+        else if (moduleName == module2.getName())
+        {
+            System.out.println ("========================================");
+            module2.print();
+        }
+        else if (moduleName == module3.getName())
+        {
+            System.out.println ("========================================");
+            module3.print();
+        }
+        else if (moduleName == module4.getName())
+        {
+            System.out.println ("========================================");
+            module4.print();
         }
     }
     
