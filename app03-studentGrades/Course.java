@@ -1,6 +1,6 @@
 
 /**
- * CLass for creation and storage of course data
+ * Class for creation and storage of course data
  *
  * @author Will Deeley
  * @version 24/10/2020
@@ -20,10 +20,14 @@ public class Course
     private Module module3;
     private Module module4;
 
-    private Module module1Mark;
-    private Module module2Mark;
-    private Module module3Mark;
-    private Module module4Mark;
+    // Variables to store Marks for individual moduals
+    private int module1Mark;
+    private int module2Mark;
+    private int module3Mark;
+    private int module4Mark;
+    
+    private int finalMark;
+    private String finalGrade;
 
     /**
      * Constructor for the identifying details of a course (ID number and Name)
@@ -54,14 +58,7 @@ public class Course
         {
             module4 = new Module(moduleName, moduleCode);
         }
-    }
-
-    public void addMark (int mark)
-    {
-        module1.changeMark(mark);
-        module2.changeMark(mark);
-        module3.changeMark(mark);
-        module4.changeMark(mark);
+        setGrade();
     }
 
     public void changeMark(String moduleName, int mark)
@@ -69,21 +66,51 @@ public class Course
         if (moduleName == module1.getName())
         {
             module1.changeMark(mark);
+            module1Mark = mark;
         }
         else if (moduleName == module2.getName())
         {
             module2.changeMark(mark);
+            module2Mark = mark;
         }
         else if (moduleName == module3.getName())
         {
             module3.changeMark(mark);
+            module3Mark = mark;
         }
         else if (moduleName == module4.getName())
         {
             module4.changeMark(mark);
+            module4Mark = mark;
         }
+        setGrade();
     }
 
+    public void setGrade()
+    {
+        finalMark = ((module1Mark + module2Mark + module3Mark + module4Mark) / 4);
+        if (finalMark <= 40)
+        {
+            finalGrade = "F";
+        }
+        else if ((finalMark <= 49) && (finalMark >= 41))
+        {
+            finalGrade = "D";
+        }
+        else if ((finalMark <= 59) && (finalMark >= 50))
+        {
+            finalGrade = "C";
+        }
+        else if ((finalMark <= 69) && (finalMark >= 60))
+        {
+            finalGrade = "B";
+        }
+        else if ((finalMark <= 100) && (finalMark >= 70))
+        {
+            finalGrade = "A";
+        }
+    }
+    
     /**
      * print the details of a course
      */
@@ -102,14 +129,8 @@ public class Course
             module2.print();
             module3.print();
             module4.print();
+            System.out.println ("========================================");
+            System.out.println ("Your grade is: " + finalGrade);
         }
-    }
-
-    /**
-     * Calculation for grade
-     */
-    public int getMark()
-    {
-        return module1.getMark();
     }
 }

@@ -13,7 +13,7 @@ public class Module
     private String moduleCode;
 
     private int modualMark;
-    
+
     private boolean completed;
 
     /**
@@ -46,12 +46,12 @@ public class Module
             System.out.println("please enter a valid Mark");
         }
     }
-    
+
     public int getMark()
     {
         return modualMark;
     }
-    
+
     public String getName()
     {
         return moduleName;
@@ -60,20 +60,12 @@ public class Module
     /**
      * method it print all the relivent details of a modual (name, ID and current mark)
      */
-    
     public void print()
     {
-        if (moduleName == null)
-        {
-            System.out.println("N/A");
-        }
-        else
-        {
-            System.out.println("module Details:");
-            System.out.println("Name = " + moduleName);
-            System.out.println("ID code = " + moduleCode);
-            System.out.println("Current Mark = " + modualMark + "%");
-            System.out.println ("========================================");
-        }
+        System.out.println("module Details:");
+        System.out.println("Name = " + moduleName);
+        System.out.println("ID code = " + moduleCode);
+        System.out.println("Current Mark = " + modualMark + "%");
+        System.out.println ("========================================");
     }
 }

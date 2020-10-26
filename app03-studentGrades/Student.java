@@ -7,6 +7,8 @@ import java.util.*;
  * @author Michael Kölling and David Barnes
  * @version 2016.02.29
  * 
+ * A Student can be assigned a Course, which stores their current Mark and Grade
+ * 
  * Edited: Will Deeley
  * Version 24/10/2020
  */
