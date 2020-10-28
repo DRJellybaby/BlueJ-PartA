@@ -35,10 +35,41 @@ Current Mark = 0%
 ========================================
 ========================================
 Your grade is: F
+course1.print();
+Course: Computing, Course ID: CO0001
+========================================
+module Details:
+Name = Programing
+ID code = CO452
+Current Mark = 0%
+========================================
+module Details:
+Name = Architecture
+ID code = CO450
+Current Mark = 0%
+========================================
+module Details:
+Name = Game Design
+ID code = CO459
+Current Mark = 0%
+========================================
+module Details:
+Name = 3D Modelling
+ID code = CO461
+Current Mark = 0%
+========================================
+========================================
+Your grade is: F
 course1.changeMark("Programing", 75);
 New mark for Programing is: 75%
 course1.changeMark("Architecture", 34);
 New mark for Architecture is: 34%
+========================================
+Modual: Programing is complete. Mark: 75%
+Modual: Architecture is incomplete. Mark: 34%
+Modual: Game Design is incomplete. Mark: 0%
+Modual: 3D Modelling is incomplete. Mark: 0%
+========================================
 course1.changeMark("Game Design", 47);
 New mark for Game Design is: 47%
 course1.changeMark("3D Modelling", 71);

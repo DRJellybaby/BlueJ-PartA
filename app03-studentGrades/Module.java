@@ -14,6 +14,8 @@ public class Module
 
     private int modualMark;
 
+    private boolean complete; 
+
     /**
      * Constructor for objects of class Module
      */
@@ -22,11 +24,12 @@ public class Module
         moduleName = name;
         moduleCode = code;
         modualMark = 0;
+        complete = false;
     }
 
     /**
      * Method to change a students mark. checks mark is a valid pacentage (0-100)
-     * detects if the mark is a pass/fail mark
+     * detects if the mark is a pass/fail mark and if modual is complete
      */
     public void changeMark(int newMark)
     {
@@ -34,6 +37,14 @@ public class Module
         {
             modualMark = newMark;
             System.out.println("New mark for " + moduleName + " is: " + modualMark + "%");
+            if (newMark >= 40)
+            {
+                complete = true;
+            }
+            else
+            {
+                complete = false;
+            }
         }
         else
         {
@@ -50,13 +61,36 @@ public class Module
     }
 
     /**
-     * get method for moduale name
+     * Get method for modual mark
+     */
+    public boolean getComplete()
+    {
+        return complete;
+    }
+
+    /**
+     * get method for modual name
      */
     public String getName()
     {
         return moduleName;
     }
 
+    /**
+     * Method to check and list complete/incomplete modual 
+     */
+    public void printIfIncomplete()
+    {
+        if (complete == true)
+        {
+            System.out.println("Modual: " + moduleName + " is complete. Mark: " + modualMark + "%");
+        }
+        else if (complete == false)
+        {
+            System.out.println("Modual: " + moduleName + " is incomplete. Mark:" + modualMark + "%");
+        }
+    }
+    
     /**
      * method it print all the relivent details of a modual (name, ID and current mark)
      * displays if the modual is a pass or fail

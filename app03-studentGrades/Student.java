@@ -17,7 +17,6 @@ import java.util.*;
 public class Student
 {
     // Attributes
-    
     private String name;
 
     private String id;

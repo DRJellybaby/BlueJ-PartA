@@ -14,8 +14,6 @@ public class Course
     private String cID;
     //ticket variable to track number of moduals and varify if it is at maximum or below required number
     private int noModule;
-    //variable for module creation
-    private Module module;
     // Variables to store details of course moduals
     private Module module1;
     private Module module2;
@@ -28,6 +26,7 @@ public class Course
     private int module3Mark;
     private int module4Mark;
     
+    //Variables for overall mark and modual
     private int finalMark;
     private String finalGrade;
 
@@ -67,7 +66,6 @@ public class Course
         {
             System.out.println ("This Course is at maximum modules");
         }
-        setGrade();
     }
 
     /**
@@ -158,11 +156,24 @@ public class Course
      */
     public void print()
     {
+        // if there are not enough moduals
         if (noModule <= 3)
         {
             System.out.println("A Course needs 4 moduals");
             System.out.println("Current number of modules: " + noModule);
         }
+        //if any moduals are not compltete
+        else if (module1.getComplete() == false || module2.getComplete() == false || module3.getComplete() == false || module3.getComplete() == false)
+        {
+            System.out.println("Some moduals are incomplete:");
+            System.out.println ("========================================");
+            module1.printIfIncomplete();
+            module2.printIfIncomplete();
+            module3.printIfIncomplete();
+            module4.printIfIncomplete();
+            System.out.println ("========================================");
+        }
+        // if all moduals are compltete
         else
         { 
             System.out.println ("Course: " + title + ", Course ID: " + cID);
