@@ -5,18 +5,18 @@
  * @author Will Deeley
  * @version 26/10/2020
  * 
- * added support for spacific moduals within the class
+ * added support for spacific moduals within the course, and checks and balances there in
  */
 public class Course
 {
     // Attributes for course Details (name and ID respectivly)
     private String title;
     private String cID;
-
+    //ticket variable to track number of moduals and varify if it is at maximum or below required number
     private int noModule;
-
+    //variable for module creation
     private Module module;
-
+    // Variables to store details of course moduals
     private Module module1;
     private Module module2;
     private Module module3;
