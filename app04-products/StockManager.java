@@ -1,4 +1,5 @@
 import java.util.ArrayList;
+import java.lang.System;
 
 /**
  * Manage the stock in a business.
@@ -10,14 +11,14 @@ import java.util.ArrayList;
 public class StockManager
 {
     // A list of the products.
-    private ArrayList<Product> stock;
+    private ArrayList<Product> stockList;
 
     /**
      * Initialise the stock manager.
      */
     public StockManager()
     {
-        stock = new ArrayList<>();
+        stockList = new ArrayList<>();
     }
 
     /**
@@ -26,7 +27,7 @@ public class StockManager
      */
     public void addProduct(Product item)
     {
-        stock.add(item);
+        stockList.add(item);
     }
     
     /**
@@ -37,6 +38,13 @@ public class StockManager
      */
     public void delivery(int id, int amount)
     {
+        for (Product product : stockList)
+        {
+            if (product.getID() == id)
+            {
+                product.increaseQuantity(amount);
+            }
+        }
     }
     
     /**
@@ -46,6 +54,13 @@ public class StockManager
      */
     public Product findProduct(int id)
     {
+        for (Product product : stockList)
+        {
+            if (product.getID() == id)
+            {
+                return product;
+            }
+        }
         return null;
     }
     
@@ -56,15 +71,45 @@ public class StockManager
      * @param id The ID of the product.
      * @return The quantity of the given product in stock.
      */
-    public int numberInStock(int id)
+    public void numberInStock(int id)
     {
-        return 0;
+        for (Product product : stockList)
+        {
+            if (product.getID() == id)
+            {
+                System.out.println(product.toString());
+            }
+        }
     }
-
+    
+    /**
+     * 
+     */
+    public void sellProduct(int id, int quantitiy)
+    {
+        Product product = findProduct(id);
+        if (product != null)
+        {
+            product.sell(quantitiy);
+        }
+    }
+    
     /**
      * Print details of all the products.
      */
-    public void printProductDetails()
+    public void printAll()
     {
+        printHeading();
+        for (Product product : stockList)
+        {
+            System.out.println(product.toString());
+        }
+    }
+    
+    public void printHeading()
+    {
+        System.out.println("====================");
+        System.out.println("W Deeley's Stock List");
+        System.out.println("====================");
     }
 }

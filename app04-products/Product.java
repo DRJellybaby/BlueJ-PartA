@@ -57,6 +57,14 @@ public class Product
     {
         return id + ": " +  name + " stock level: " + quantity;
     }
+    
+    /**
+     * Changes the name of a product.
+     */
+    public void setName(String name)
+    {
+        this.name = name;
+    }
 
     /**
      * Restock with the given amount of this product.
@@ -81,11 +89,11 @@ public class Product
      * Sell one of these products.
      * An error is reported if there appears to be no stock.
      */
-    public void sellOne()
+    public void sell(int saleNumber)
     {
-        if(quantity > 0) 
+        if(quantity >= saleNumber) 
         {
-            quantity--;
+            quantity -= saleNumber;
         }
         else 
         {
