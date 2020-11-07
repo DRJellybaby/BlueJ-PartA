@@ -101,6 +101,20 @@ public class StockManager
         }
         return null;
     }
+    
+    public void printPartialName(String partialName)
+    {
+        printHeading();
+        System.out.println("Products containing '" + partialName + "':");
+        System.out.println("------------------------------------------");
+        for (Product product : stockList)
+        {
+            if (product.getName().contains(partialName))
+            {
+                System.out.println(product.toString());
+            }
+        }
+    }
 
     /**
      * Locate a product with the given ID, and return how
@@ -157,7 +171,7 @@ public class StockManager
             System.out.println(product.toString());
         }
     }
-
+    
     /**
      * Print Method for heading of list methods
      */
