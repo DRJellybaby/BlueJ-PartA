@@ -61,13 +61,13 @@ public class StockManager
         }
     }    
     
-     public void removeProduct(int id)
+    public void removeProduct(int id)
     {
        for (Product product : stockList)
         {
             if (product.getID() == id)
             {
-                stockList.remove(this);
+                stockList.remove(1);
             }
         }
     }    
@@ -107,8 +107,20 @@ public class StockManager
         }
     }
     
+    public void listLowStock()
+    {
+        printHeading(); System.out.println ("(low Stock)");
+        for (Product product : stockList)
+        {
+            if (product.getQuantity() <= 10)
+            {
+                System.out.println(product.toString());
+            }
+        }
+    }
+    
     /**
-     * 
+     * sell a custom amount of a product
      */
     public void sellProduct(int id, int quantitiy)
     {
