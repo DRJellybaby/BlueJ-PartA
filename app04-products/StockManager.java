@@ -29,7 +29,7 @@ public class StockManager
     {
         stockList.add(item);
     }
-    
+
     /**
      * Receive a delivery of a particular product.
      * Increase the quantity of the product by the given amount.
@@ -38,40 +38,49 @@ public class StockManager
      */
     public void delivery(int id, int amount)
     {
-        for (Product product : stockList)
+        Product product = findProduct(id);
+        if (product != null)
         {
-            if (product.getID() == id)
-            {
-                product.increaseQuantity(amount);
-            }
+            product.increaseQuantity(amount);
+        }
+        else
+        {
+            printInvalidId(id);
         }
     }
-    
+
     /**
      * 
      */
     public void changeProductName(int id, String name)
     {
-        for (Product product : stockList)
+        Product product = findProduct(id);
+        if (product != null)
         {
-            if (product.getID() == id)
-            {
-                product.setName(name);
-            }
+            product.setName(name);
+        }
+        else
+        {
+            printInvalidId(id);
         }
     }    
-    
+
+    /**
+     * remove specific product from the stock list based on the ID
+     */
     public void removeProduct(int id)
     {
-       for (Product product : stockList)
+        Product product = findProduct(id);
+        if (product != null)
         {
-            if (product.getID() == id)
-            {
-                stockList.remove(1);
-            }
+            stockList.remove(1);
+        }
+        else
+        {
+            printInvalidId(id);
         }
     }    
-    
+
     /**
      * Try to find a product in the stock with the given id.
      * @return The identified product, or null if there is none
@@ -85,10 +94,14 @@ public class StockManager
             {
                 return product;
             }
+            else
+            {
+                printInvalidId(id);
+            }
         }
         return null;
     }
-    
+
     /**
      * Locate a product with the given ID, and return how
      * many of this item are in stock. If the ID does not
@@ -98,18 +111,16 @@ public class StockManager
      */
     public void numberInStock(int id)
     {
-        for (Product product : stockList)
+        Product product = findProduct(id);
+        if (product != null)
         {
-            if (product.getID() == id)
-            {
-                System.out.println(product.toString());
-            }
+            System.out.println(product.toString());
         }
     }
-    
+
     public void listLowStock()
     {
-        printHeading(); System.out.println ("(low Stock)");
+        printLowStockHeading();
         for (Product product : stockList)
         {
             if (product.getQuantity() <= 10)
@@ -118,7 +129,7 @@ public class StockManager
             }
         }
     }
-    
+
     /**
      * sell a custom amount of a product
      */
@@ -129,8 +140,12 @@ public class StockManager
         {
             product.sell(quantitiy);
         }
+        else
+        {
+            printInvalidId(id);
+        }
     }
-    
+
     /**
      * Print details of all the products.
      */
@@ -142,11 +157,36 @@ public class StockManager
             System.out.println(product.toString());
         }
     }
-    
+
+    /**
+     * Print Method for heading of list methods
+     */
     public void printHeading()
     {
         System.out.println("====================");
         System.out.println("W Deeley's Stock List");
         System.out.println("====================");
     }
+    
+    /**
+     * Print Method for Low stock method
+     */
+    public void printLowStockHeading()
+    {
+        System.out.println("====================");
+        System.out.println("W Deeley's Stock List");
+        System.out.println("Low Stock (under 10)");
+        System.out.println("====================");
+    }
+    
+    /**
+     * Print Method for when a search is invalid based on the ID
+     */
+    public void printInvalidId(int id)
+    {
+        System.out.println("====================");
+        System.out.println("No item with ID: " + id + " exsists");
+        System.out.println("====================");
+    }
+
 }
