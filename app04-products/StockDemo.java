@@ -46,30 +46,22 @@ public class StockDemo
     public void runDemo()
     {
        System.out.println(" =====StockManager Demonstration===== \n");
-       
        manager.printAll();
-       
        System.out.println("\n\n===== Add Products Demo =====");
        System.out.println("add three products to stock list");
        demoAddProduct();
-       
        System.out.println("\n\n===== Delivery Demo =====");
        demoDelivery();
-       
        System.out.println("\n\n===== Sell Product Demo =====");
        demoSellProduct();
-       
        System.out.println("\n\n===== Rename Product Demo =====");
        System.out.println("Rename item 105 from S7 to S8");
        demoRenameProduct();
-            
        System.out.println("\n\n===== Remove product from stock Demo =====");
        System.out.println("Remove product ID 101");
        demoRemoveProduct();
-       
        System.out.println("\n\n===== Product Search with Partial Name Demo =====");
        demoPrintPartialName();
-       
        System.out.println("\n\n===== Low Product Stock Demo =====|");
        demoListLowStock();   
     }

@@ -2,11 +2,10 @@ import java.util.ArrayList;
 import java.lang.System;
 
 /**
- * Manage the stock in a business.
- * The stock is described by zero or more Products.
+ * manages list of products sold by a store, stock can be sold, delivered, added or edited
  * 
- * @author (your name) 
- * @version (a version number or a date)
+ * @author Will Deeley
+ * @version 07/11/2020
  */
 public class StockManager
 {
@@ -46,7 +45,7 @@ public class StockManager
     }
 
     /**
-     * 
+     * method to alter a products name
      */
     public void changeProductName(int id, String name)
     {
@@ -79,9 +78,7 @@ public class StockManager
     }    
 
     /**
-     * Try to find a product in the stock with the given id.
-     * @return The identified product, or null if there is none
-     *         with a matching ID.
+     * locates and returns product details from the given ID
      */
     public Product findProduct(int id)
     {
@@ -95,6 +92,9 @@ public class StockManager
         return null;
     }
     
+    /**
+     * locates products that have the given details in their name. (Samsung will list all Samsung products
+     */
     public void printPartialName(String partialName)
     {
         printHeading();
@@ -110,11 +110,7 @@ public class StockManager
     }
 
     /**
-     * Locate a product with the given ID, and return how
-     * many of this item are in stock. If the ID does not
-     * match any product, return zero.
-     * @param id The ID of the product.
-     * @return The quantity of the given product in stock.
+     * Method to locate and provide given details of a product based on the ID
      */
     public void numberInStock(int id)
     {
@@ -125,6 +121,9 @@ public class StockManager
         }
     }
 
+    /**
+     * Method to list all products whos quantity is below a given amount (10)
+     */
     public void listLowStock()
     {
         printLowStockHeading();
@@ -166,7 +165,7 @@ public class StockManager
     }
     
     /**
-     * Print Method for heading of list methods
+     * Print heading for heading of list methods
      */
     public void printHeading()
     {
@@ -176,7 +175,7 @@ public class StockManager
     }
     
     /**
-     * Print Method for Low stock method
+     * Print heading for Low stock method
      */
     public void printLowStockHeading()
     {
@@ -187,7 +186,7 @@ public class StockManager
     }
     
     /**
-     * Print Method for when a search is invalid based on the ID
+     * Print output for when a search is invalid based on the ID
      */
     public void printInvalidId(int id)
     {
