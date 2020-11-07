@@ -70,7 +70,7 @@ public class Product
      * Restock with the given amount of this product.
      * The current quantity is incremented by the given amount.
      * @param amount The number of new items added to the stock.
-     *               This must be greater than zero.
+     * This must be greater than zero.
      */
     public void increaseQuantity(int amount)
     {
@@ -94,11 +94,12 @@ public class Product
         if(quantity >= saleNumber) 
         {
             quantity -= saleNumber;
+            System.out.println(saleNumber + " " + name + " Sold");
         }
         else 
         {
-            System.out.println(
-                "Attempt to sell an out of stock item: " + name);
+            System.out.println("Not enough of the item: " + name);
+            System.out.println("current stock is: " + quantity);
         }
     }
 }

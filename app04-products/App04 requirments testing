@@ -1,0 +1,120 @@
+StockManager stockMan1 = new StockManager();
+StockDemo stockDem1 = new StockDemo(stockMan1);
+stockDem1.runDemo();
+ =====StockManager Demonstration===== 
+
+====================
+W Deeley's Stock List
+====================
+101: Samsung Galaxy S20 stock level: 0
+102: Samsung Galaxy S20 FE stock level: 0
+103: Apple iPhone 12 stock level: 0
+104: Google Pixel 4A stock level: 0
+105: Samsung Galaxy S7 stock level: 0
+106: Apple iPhone 11 stock level: 0
+107: Apple iPhone X stock level: 0
+
+
+===== Add Products Demo =====
+add three products to stock list
+====================
+W Deeley's Stock List
+====================
+101: Samsung Galaxy S20 stock level: 0
+102: Samsung Galaxy S20 FE stock level: 0
+103: Apple iPhone 12 stock level: 0
+104: Google Pixel 4A stock level: 0
+105: Samsung Galaxy S7 stock level: 0
+106: Apple iPhone 11 stock level: 0
+107: Apple iPhone X stock level: 0
+108: Samsung Galaxy S9 stock level: 0
+109: Samsung Galaxy S10 stock level: 0
+110: Google Pixel 5 stock level: 0
+
+
+===== Delivery Demo =====
+====================
+W Deeley's Stock List
+====================
+101: Samsung Galaxy S20 stock level: 6
+102: Samsung Galaxy S20 FE stock level: 0
+103: Apple iPhone 12 stock level: 0
+104: Google Pixel 4A stock level: 23
+105: Samsung Galaxy S7 stock level: 0
+106: Apple iPhone 11 stock level: 11
+107: Apple iPhone X stock level: 24
+108: Samsung Galaxy S9 stock level: 0
+109: Samsung Galaxy S10 stock level: 0
+110: Google Pixel 5 stock level: 0
+
+
+===== Sell Product Demo =====
+5 Samsung Galaxy S20 Sold
+7 Google Pixel 4A Sold
+Not enough of the item: Samsung Galaxy S10
+current stock is: 0
+====================
+No item with ID: 111 exsists
+====================
+
+
+===== Rename Product Demo =====
+Rename item 105 from S7 to S8
+====================
+W Deeley's Stock List
+====================
+101: Samsung Galaxy S20 stock level: 1
+102: Samsung Galaxy S20 FE stock level: 0
+103: Apple iPhone 12 stock level: 0
+104: Google Pixel 4A stock level: 16
+105: Samsung Galaxy S8 stock level: 0
+106: Apple iPhone 11 stock level: 11
+107: Apple iPhone X stock level: 24
+108: Samsung Galaxy S9 stock level: 0
+109: Samsung Galaxy S10 stock level: 0
+110: Google Pixel 5 stock level: 0
+
+
+===== Remove product from stock Demo =====
+Remove product ID 101
+Product ID: 101 removed from stock list
+====================
+W Deeley's Stock List
+====================
+101: Samsung Galaxy S20 stock level: 1
+103: Apple iPhone 12 stock level: 0
+104: Google Pixel 4A stock level: 16
+105: Samsung Galaxy S8 stock level: 0
+106: Apple iPhone 11 stock level: 11
+107: Apple iPhone X stock level: 24
+108: Samsung Galaxy S9 stock level: 0
+109: Samsung Galaxy S10 stock level: 0
+110: Google Pixel 5 stock level: 0
+
+
+===== Product Search with Partial Name Demo =====
+====================
+W Deeley's Stock List
+====================
+Products containing 'Samsung':
+------------------------------------------
+101: Samsung Galaxy S20 stock level: 1
+105: Samsung Galaxy S8 stock level: 0
+108: Samsung Galaxy S9 stock level: 0
+109: Samsung Galaxy S10 stock level: 0
+
+
+===== Low Product Stock Demonstration =====|
+====================
+W Deeley's Stock List
+Low Stock (under 10)
+====================
+101: Samsung Galaxy S20 stock level: 1
+103: Apple iPhone 12 stock level: 0
+105: Samsung Galaxy S8 stock level: 0
+108: Samsung Galaxy S9 stock level: 0
+109: Samsung Galaxy S10 stock level: 0
+110: Google Pixel 5 stock level: 0
+stockDem1.getProduct(111)
+Product with ID: 111 is not recognised.
+    returned Object null

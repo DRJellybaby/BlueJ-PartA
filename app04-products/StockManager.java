@@ -43,10 +43,6 @@ public class StockManager
         {
             product.increaseQuantity(amount);
         }
-        else
-        {
-            printInvalidId(id);
-        }
     }
 
     /**
@@ -74,6 +70,7 @@ public class StockManager
         if (product != null)
         {
             stockList.remove(1);
+            System.out.println("Product ID: " + id + " removed from stock list");
         }
         else
         {
@@ -93,10 +90,6 @@ public class StockManager
             if (product.getID() == id)
             {
                 return product;
-            }
-            else
-            {
-                printInvalidId(id);
             }
         }
         return null;
