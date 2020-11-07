@@ -48,6 +48,31 @@ public class StockManager
     }
     
     /**
+     * 
+     */
+    public void changeProductName(int id, String name)
+    {
+        for (Product product : stockList)
+        {
+            if (product.getID() == id)
+            {
+                product.setName(name);
+            }
+        }
+    }    
+    
+     public void removeProduct(int id)
+    {
+       for (Product product : stockList)
+        {
+            if (product.getID() == id)
+            {
+                stockList.remove(this);
+            }
+        }
+    }    
+    
+    /**
      * Try to find a product in the stock with the given id.
      * @return The identified product, or null if there is none
      *         with a matching ID.

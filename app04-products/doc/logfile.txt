@@ -1,0 +1,38 @@
+Class documentation
+<---- javadoc command: ---->
+C:\Users\rogne\Documents\BlueJ\bluej\jdk\bin\javadoc.exe
+-author
+-version
+-nodeprecated
+-package
+-Xdoclint:none
+-noindex
+-notree
+-nohelp
+-nonavbar
+-source
+11
+-classpath
+C:\Users\rogne\Documents\BlueJ\bluej\lib\bluejcore.jar;C:\Users\rogne\Documents\BlueJ\bluej\lib\junit-4.11.jar;C:\Users\rogne\Documents\BlueJ\bluej\lib\hamcrest-core-1.3.jar;C:\Users\rogne\Documents\BlueJ\bluej\lib\lang-stride.jar;C:\Users\rogne\Documents\BlueJ\bluej\lib\javafx\lib\javafx.base.jar;C:\Users\rogne\Documents\BlueJ\bluej\lib\javafx\lib\javafx.controls.jar;C:\Users\rogne\Documents\BlueJ\bluej\lib\javafx\lib\javafx.fxml.jar;C:\Users\rogne\Documents\BlueJ\bluej\lib\javafx\lib\javafx.graphics.jar;C:\Users\rogne\Documents\BlueJ\bluej\lib\javafx\lib\javafx.media.jar;C:\Users\rogne\Documents\BlueJ\bluej\lib\javafx\lib\javafx.properties.jar;C:\Users\rogne\Documents\BlueJ\bluej\lib\javafx\lib\javafx.swing.jar;C:\Users\rogne\Documents\BlueJ\bluej\lib\javafx\lib\javafx.web.jar;D:\Github\BlueJ-PartA\app04-products
+-d
+D:\Github\BlueJ-PartA\app04-products\doc
+-encoding
+UTF-8
+-charset
+UTF-8
+D:\Github\BlueJ-PartA\app04-products\StockManager.java
+<---- end of javadoc command ---->
+Loading source file D:\Github\BlueJ-PartA\app04-products\StockManager.java...
+Constructing Javadoc information...
+Standard Doclet version 11.0.2
+Building tree for all the packages and classes...
+Generating D:\Github\BlueJ-PartA\app04-products\doc\StockManager.html...
+D:\Github\BlueJ-PartA\app04-products\StockManager.java:74: warning - @return tag cannot be used in method with void return type.
+Generating D:\Github\BlueJ-PartA\app04-products\doc\package-summary.html...
+Generating D:\Github\BlueJ-PartA\app04-products\doc\constant-values.html...
+Building index for all the packages and classes...
+Building index for all classes...
+Generating D:\Github\BlueJ-PartA\app04-products\doc\allclasses.html...
+Generating D:\Github\BlueJ-PartA\app04-products\doc\allclasses.html...
+Generating D:\Github\BlueJ-PartA\app04-products\doc\index.html...
+1 warning

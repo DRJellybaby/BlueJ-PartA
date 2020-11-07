@@ -83,8 +83,8 @@ public class Product
             System.out.println("Attempt to restock " + name +
                                " with a non-positive amount: " + amount);
         }
-    }
-
+    }    
+    
     /**
      * Sell one of these products.
      * An error is reported if there appears to be no stock.
