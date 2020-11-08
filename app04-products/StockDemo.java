@@ -22,6 +22,8 @@ public class StockDemo
 {
     // The stock manager.
     private StockManager manager;
+    
+    private int amount;
 
     /**
      * Create a StockManager and populate it with a few
@@ -58,7 +60,7 @@ public class StockDemo
        System.out.println("Rename item 105 from S7 to S8");
        demoRenameProduct();
        System.out.println("\n\n===== Remove product from stock Demo =====");
-       System.out.println("Remove product ID 101");
+       System.out.println("Remove product ID 102");
        demoRemoveProduct();
        System.out.println("\n\n===== Product Search with Partial Name Demo =====");
        demoPrintPartialName();
@@ -74,6 +76,7 @@ public class StockDemo
         manager.addProduct(new Product(108,  "Samsung Galaxy S9"));
         manager.addProduct(new Product(109,  "Samsung Galaxy S10"));
         manager.addProduct(new Product(110,  "Google Pixel 5"));
+        manager.addProduct(new Product(111,  "Samsung Galaxy Z Fold2"));
         manager.printAll();
     }
     
@@ -82,11 +85,12 @@ public class StockDemo
      */
     public void demoDelivery()
     {
-        manager.delivery(101, 6);
-        manager.delivery(104, 23);
-        manager.delivery(106, 11);
-        manager.delivery(107, 24);
-        manager.printAll();
+        amount = 10;
+        for (int id = 101; id<= 110; id++)
+        {
+            amount++;
+            manager.delivery(id, amount);
+        }
     }
     
     /**
@@ -103,7 +107,7 @@ public class StockDemo
      */
     public void demoRemoveProduct()
     {
-        manager.removeProduct(101);
+        manager.removeProduct(102);
         manager.printAll();
     }
         
@@ -135,14 +139,13 @@ public class StockDemo
     
     /**
      * Demo method to test selling products based on the ID.
-     * (5 products with id 101. 7 products with id 104. 10 products with id 109.).
      */
     public void demoSellProduct()
     {
-        manager.sellProduct(101, 5);
-        manager.sellProduct(104, 7);
-        manager.sellProduct(109, 10);
-        manager.sellProduct(111, 12);
+        for (int id = 101; id<= 111; id++)
+        {
+        manager.sellProduct(id, 5);
+        }
     }
     
     /**
@@ -185,4 +188,5 @@ public class StockDemo
     {
         return manager;
     }
+    
 }

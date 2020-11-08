@@ -30,32 +30,36 @@ W Deeley's Stock List
 108: Samsung Galaxy S9 stock level: 0
 109: Samsung Galaxy S10 stock level: 0
 110: Google Pixel 5 stock level: 0
+111: Samsung Galaxy Z Fold2 stock level: 0
 
 
 ===== Delivery Demo =====
-====================
-W Deeley's Stock List
-====================
-101: Samsung Galaxy S20 stock level: 6
-102: Samsung Galaxy S20 FE stock level: 0
-103: Apple iPhone 12 stock level: 0
-104: Google Pixel 4A stock level: 23
-105: Samsung Galaxy S7 stock level: 0
-106: Apple iPhone 11 stock level: 11
-107: Apple iPhone X stock level: 24
-108: Samsung Galaxy S9 stock level: 0
-109: Samsung Galaxy S10 stock level: 0
-110: Google Pixel 5 stock level: 0
+11 Samsung Galaxy S20 delivered
+12 Samsung Galaxy S20 FE delivered
+13 Apple iPhone 12 delivered
+14 Google Pixel 4A delivered
+15 Samsung Galaxy S7 delivered
+16 Apple iPhone 11 delivered
+17 Apple iPhone X delivered
+18 Samsung Galaxy S9 delivered
+19 Samsung Galaxy S10 delivered
+20 Google Pixel 5 delivered
 
 
 ===== Sell Product Demo =====
 5 Samsung Galaxy S20 Sold
-7 Google Pixel 4A Sold
-Not enough of the item: Samsung Galaxy S10
+5 Samsung Galaxy S20 FE Sold
+5 Apple iPhone 12 Sold
+5 Google Pixel 4A Sold
+5 Samsung Galaxy S7 Sold
+5 Apple iPhone 11 Sold
+5 Apple iPhone X Sold
+5 Samsung Galaxy S9 Sold
+5 Samsung Galaxy S10 Sold
+5 Google Pixel 5 Sold
+Not enough of the item: Samsung Galaxy Z Fold2
 current stock is: 0
-====================
-No item with ID: 111 exsists
-====================
+5 more required
 
 
 ===== Rename Product Demo =====
@@ -63,33 +67,35 @@ Rename item 105 from S7 to S8
 ====================
 W Deeley's Stock List
 ====================
-101: Samsung Galaxy S20 stock level: 1
-102: Samsung Galaxy S20 FE stock level: 0
-103: Apple iPhone 12 stock level: 0
-104: Google Pixel 4A stock level: 16
-105: Samsung Galaxy S8 stock level: 0
+101: Samsung Galaxy S20 stock level: 6
+102: Samsung Galaxy S20 FE stock level: 7
+103: Apple iPhone 12 stock level: 8
+104: Google Pixel 4A stock level: 9
+105: Samsung Galaxy S8 stock level: 10
 106: Apple iPhone 11 stock level: 11
-107: Apple iPhone X stock level: 24
-108: Samsung Galaxy S9 stock level: 0
-109: Samsung Galaxy S10 stock level: 0
-110: Google Pixel 5 stock level: 0
+107: Apple iPhone X stock level: 12
+108: Samsung Galaxy S9 stock level: 13
+109: Samsung Galaxy S10 stock level: 14
+110: Google Pixel 5 stock level: 15
+111: Samsung Galaxy Z Fold2 stock level: 0
 
 
 ===== Remove product from stock Demo =====
-Remove product ID 101
-Product ID: 101 removed from stock list
+Remove product ID 102
+Product ID: 102 removed from stock list
 ====================
 W Deeley's Stock List
 ====================
-101: Samsung Galaxy S20 stock level: 1
-103: Apple iPhone 12 stock level: 0
-104: Google Pixel 4A stock level: 16
-105: Samsung Galaxy S8 stock level: 0
+101: Samsung Galaxy S20 stock level: 6
+103: Apple iPhone 12 stock level: 8
+104: Google Pixel 4A stock level: 9
+105: Samsung Galaxy S8 stock level: 10
 106: Apple iPhone 11 stock level: 11
-107: Apple iPhone X stock level: 24
-108: Samsung Galaxy S9 stock level: 0
-109: Samsung Galaxy S10 stock level: 0
-110: Google Pixel 5 stock level: 0
+107: Apple iPhone X stock level: 12
+108: Samsung Galaxy S9 stock level: 13
+109: Samsung Galaxy S10 stock level: 14
+110: Google Pixel 5 stock level: 15
+111: Samsung Galaxy Z Fold2 stock level: 0
 
 
 ===== Product Search with Partial Name Demo =====
@@ -98,23 +104,20 @@ W Deeley's Stock List
 ====================
 Products containing 'Samsung':
 ------------------------------------------
-101: Samsung Galaxy S20 stock level: 1
-105: Samsung Galaxy S8 stock level: 0
-108: Samsung Galaxy S9 stock level: 0
-109: Samsung Galaxy S10 stock level: 0
+101: Samsung Galaxy S20 stock level: 6
+105: Samsung Galaxy S8 stock level: 10
+108: Samsung Galaxy S9 stock level: 13
+109: Samsung Galaxy S10 stock level: 14
+111: Samsung Galaxy Z Fold2 stock level: 0
 
 
-===== Low Product Stock Demonstration =====|
+===== Low Product Stock Demo =====|
 ====================
 W Deeley's Stock List
 Low Stock (under 10)
 ====================
-101: Samsung Galaxy S20 stock level: 1
-103: Apple iPhone 12 stock level: 0
-105: Samsung Galaxy S8 stock level: 0
-108: Samsung Galaxy S9 stock level: 0
-109: Samsung Galaxy S10 stock level: 0
-110: Google Pixel 5 stock level: 0
-stockDem1.getProduct(111)
-Product with ID: 111 is not recognised.
-    returned Object null
+101: Samsung Galaxy S20 stock level: 6
+103: Apple iPhone 12 stock level: 8
+104: Google Pixel 4A stock level: 9
+105: Samsung Galaxy S8 stock level: 10
+111: Samsung Galaxy Z Fold2 stock level: 0

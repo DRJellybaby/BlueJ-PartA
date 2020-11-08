@@ -77,6 +77,7 @@ public class Product
         if(amount > 0) 
         {
             quantity += amount;
+            System.out.println(amount + " " + name + " delivered");
         }
         else 
         {
@@ -100,6 +101,7 @@ public class Product
         {
             System.out.println("Not enough of the item: " + name);
             System.out.println("current stock is: " + quantity);
+            System.out.println((saleNumber - quantity) + " more required");
         }
     }
 }
