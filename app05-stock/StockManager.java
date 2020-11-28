@@ -21,7 +21,7 @@ public class StockManager
     {
         stockList = new ArrayList<>();
     }
-
+    
     /**
      * Add a product to the list.
      * @param item The item to be added.
@@ -91,7 +91,20 @@ public class StockManager
                 return product;
             }
         }
-        return product;
+        return null;
+    }
+
+    public boolean chackDuplicateID(int id)
+    {
+        Product product = findProduct(id);
+        if (product == null)
+        {
+            return false;
+        }
+        else
+        {
+            return true;
+        }
     }
 
     /**
@@ -126,14 +139,25 @@ public class StockManager
     /**
      * Method to list all products whos quantity is below a given amount (10)
      */
-    public void listLowStock()
+    public void listLowStock(int level)
     {
         printLowStockHeading();
         for (Product product : stockList)
         {
-            if (product.getQuantity() <= 10)
+            if (product.getQuantity() <= level)
             {
                 System.out.println(product.toString());
+            }
+        }
+    }
+
+    public void restockLowStock()
+    {
+        for (Product product : stockList)
+        {
+            if (product.getQuantity() <= 10)
+            {
+                product.increaseQuantity(15);
             }
         }
     }
@@ -183,7 +207,7 @@ public class StockManager
     {
         System.out.println("====================");
         System.out.println("W Deeley's Stock List");
-        System.out.println("Low Stock (under 10)");
+        System.out.println("      Low Stock      ");
         System.out.println("====================");
     }
 

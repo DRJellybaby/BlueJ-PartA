@@ -39,45 +39,9 @@ public class StockDemo
         manager.addProduct(new Product(105, "Samsung Galaxy S7"));
         manager.addProduct(new Product(106,  "Apple iPhone 11"));
         manager.addProduct(new Product(107,  "Apple iPhone X"));
-    }
-    
-    /**
-     * method that tests all functions of the program.  
-     * specific details listed in methods below.
-     */
-    public void runDemo()
-    {
-       System.out.println(" =====StockManager Demonstration===== \n");
-       manager.printAll();
-       System.out.println("\n\n===== Add Products Demo =====");
-       System.out.println("add three products to stock list");
-       demoAddProduct();
-       System.out.println("\n\n===== Delivery Demo =====");
-       demoDelivery();
-       System.out.println("\n\n===== Sell Product Demo =====");
-       demoSellProduct();
-       System.out.println("\n\n===== Rename Product Demo =====");
-       System.out.println("Rename item 105 from S7 to S8");
-       demoRenameProduct();
-       System.out.println("\n\n===== Remove product from stock Demo =====");
-       System.out.println("Remove product ID 102");
-       demoRemoveProduct();
-       System.out.println("\n\n===== Product Search with Partial Name Demo =====");
-       demoPrintPartialName();
-       System.out.println("\n\n===== Low Product Stock Demo =====|");
-       demoListLowStock();   
-    }
-    
-     /**
-     * Demo method to test adding new products to the list.
-     */
-    public void demoAddProduct()
-    {
         manager.addProduct(new Product(108,  "Samsung Galaxy S9"));
         manager.addProduct(new Product(109,  "Samsung Galaxy S10"));
         manager.addProduct(new Product(110,  "Google Pixel 5"));
-        manager.addProduct(new Product(111,  "Samsung Galaxy Z Fold2"));
-        manager.printAll();
     }
     
     /**
@@ -134,7 +98,7 @@ public class StockDemo
      */
     public void demoListLowStock()
     {
-        manager.listLowStock();
+        manager.listLowStock(10);
     }
     
     /**
