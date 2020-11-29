@@ -78,7 +78,7 @@ public class StockApp
         }
         else if (choice.equals("RESTOCK"))
         {
-            manager.restockLowStock();
+            restockLowStock();
         }
         else if (choice.equals("DELIVERY"))
         {
@@ -125,19 +125,21 @@ public class StockApp
      */
     private void removeProduct()
     {
-        System.out.println("\n Please enter Product ID you wish to remove:");
-        String ID = input.getInput();
-        
-        int id = Integer.parseInt(ID);
+        int id = getPoductID();
         manager.removeProduct(id);
     }
     
     private void listLowStock()
     {
-        System.out.println("\n Please enter minimum stock level:");
-        String sLevel = input.getInput();
-        int level = Integer.parseInt(sLevel);
+        int level = getMinStockLevel();
         manager.listLowStock(level);
+    }
+    
+    private void restockLowStock()
+    {
+        int level = getMinStockLevel();
+        int amount = getProductQuantity();
+        manager.restockLowStock(level, amount);
     }
     
     private void searchList()
@@ -150,28 +152,49 @@ public class StockApp
     
     private void takeDelivery()
     {
-        System.out.println("\n Please enter delivered product ID:");
-        String ID = input.getInput();
-        int id = Integer.parseInt(ID);
-        
-        System.out.println("\n Please enter amount delivered:");
-        String Amount = input.getInput();
-        int amount = Integer.parseInt(Amount);
+        int id = getPoductID();
+        int amount = getProductQuantity();
         
         manager.delivery(id, amount);
     }
     
     private void sellProduct()
     {
+        int id = getPoductID();
+        int amount = getProductQuantity();
+        
+        if (amount < 0) 
+        {
+            System.out.println("\n Please enter a posative value");
+        }
+        else
+        {
+            manager.sellProduct(id, amount);
+        }
+    }
+    
+    public int getPoductID()
+    {
         System.out.println("\n Please enter product ID:");
         String ID = input.getInput();
         int id = Integer.parseInt(ID);
-        
-        System.out.println("\n Please enter sale amount:");
-        String Amount = input.getInput();
-        int amount = Integer.parseInt(Amount);
-        
-        manager.sellProduct(id, amount);
+        return id;
+    }
+    
+    public int getMinStockLevel()
+    {
+        System.out.println("\n Please enter minimum stock level:");
+        String sLevel = input.getInput();
+        int level = Integer.parseInt(sLevel);
+        return level;
+    }
+    
+    public int getProductQuantity()
+    {
+        System.out.println("\n Please enter Quantity:");
+        String Quantity = input.getInput();
+        int quantity = Integer.parseInt(Quantity);
+        return quantity;
     }
     
     /**

@@ -68,7 +68,7 @@ public class StockManager
     public void removeProduct(int id)
     {
         Product product = findProduct(id);
-        if (product.getID() == id)
+        if (product != null)
         {
             stockList.remove(product);
             System.out.println("Product ID: " + id + " removed from stock list");
@@ -151,13 +151,13 @@ public class StockManager
         }
     }
 
-    public void restockLowStock()
+    public void restockLowStock(int level, int amount)
     {
         for (Product product : stockList)
         {
-            if (product.getQuantity() <= 10)
+            if (product.getQuantity() <= level)
             {
-                product.increaseQuantity(15);
+                product.increaseQuantity(amount);
             }
         }
     }
