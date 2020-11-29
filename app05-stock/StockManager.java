@@ -141,7 +141,7 @@ public class StockManager
      */
     public void listLowStock(int level)
     {
-        printLowStockHeading();
+        printLowStockHeading(level);
         for (Product product : stockList)
         {
             if (product.getQuantity() <= level)
@@ -203,11 +203,11 @@ public class StockManager
     /**
      * Print heading for Low stock method
      */
-    public void printLowStockHeading()
+    public void printLowStockHeading(int level)
     {
         System.out.println("====================");
         System.out.println("W Deeley's Stock List");
-        System.out.println("      Low Stock      ");
+        System.out.println("Low Stock (under " + level + ")");
         System.out.println("====================");
     }
 

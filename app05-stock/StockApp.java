@@ -32,7 +32,6 @@ public class StockApp
         printHeading();
         getMenuChoice();
     }
-   
     
     private void getMenuChoice()
     {
@@ -80,6 +79,14 @@ public class StockApp
         else if (choice.equals("RESTOCK"))
         {
             manager.restockLowStock();
+        }
+        else if (choice.equals("DELIVERY"))
+        {
+            takeDelivery();
+        }
+        else if (choice.equals("SELL"))
+        {
+            sellProduct();
         }
     }
     
@@ -141,6 +148,32 @@ public class StockApp
         manager.printPartialName(details);
     }
     
+    private void takeDelivery()
+    {
+        System.out.println("\n Please enter delivered product ID:");
+        String ID = input.getInput();
+        int id = Integer.parseInt(ID);
+        
+        System.out.println("\n Please enter amount delivered:");
+        String Amount = input.getInput();
+        int amount = Integer.parseInt(Amount);
+        
+        manager.delivery(id, amount);
+    }
+    
+    private void sellProduct()
+    {
+        System.out.println("\n Please enter product ID:");
+        String ID = input.getInput();
+        int id = Integer.parseInt(ID);
+        
+        System.out.println("\n Please enter sale amount:");
+        String Amount = input.getInput();
+        int amount = Integer.parseInt(Amount);
+        
+        manager.sellProduct(id, amount);
+    }
+    
     /**
      * Print out a menu of operation choices
      */
@@ -153,6 +186,8 @@ public class StockApp
         System.out.println("    Search:      Search product list for products");
         System.out.println("    LowStock:    list stock below the given level");
         System.out.println("    Restock:     Change the minimum stock level");
+        System.out.println("    Delivery:    Increase the stock level of a product");
+        System.out.println("    Sell:        Sell product from stock");
         System.out.println("    Quit:        Quit the program");
         System.out.println();        
     }
