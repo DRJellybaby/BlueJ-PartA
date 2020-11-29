@@ -4,8 +4,8 @@
  * stock manager so that users can add, edit,
  * print and remove stock products
  *
- * @author Student Name
- * @version 0.1
+ * @author Will Deeley
+ * @version 29/11/2020
  */
 public class StockApp
 {
@@ -24,7 +24,7 @@ public class StockApp
     }
 
     /**
-     * 
+     * runs program
      */
     public void run()
     {
@@ -32,6 +32,9 @@ public class StockApp
         getMenuChoice();
     }
     
+    /**
+     * displays menu and handals initial user requests
+     */
     private void getMenuChoice()
     {
         boolean finished = false;
@@ -53,6 +56,9 @@ public class StockApp
         }
     }
     
+    /** 
+     * takes user input and runs appropriate information
+     */
     private void menuChoice(String choice)
     {
         if (choice.equals("ADD"))
@@ -124,7 +130,7 @@ public class StockApp
     }
     
     /** 
-     * 
+     * Method to remove products. gets product id from user and removes specified product
      */
     private void removeProduct()
     {
@@ -132,12 +138,18 @@ public class StockApp
         manager.removeProduct(id);
     }
     
+    /** 
+     * Method to list low stock under a specified level. also gets level from user
+     */
     private void listLowStock()
     {
         int level = getMinStockLevel();
         manager.listLowStock(level);
     }
     
+    /** 
+     * Method to restock products under a specified level, allows user to determine the reorder amount
+     */
     private void restockLowStock()
     {
         int level = getMinStockLevel();
@@ -145,6 +157,10 @@ public class StockApp
         manager.restockLowStock(level, amount);
     }
     
+    /** 
+     * allows user to search the product list for a product.
+     * allows incomplete search information, will display all possible resaults
+     */
     private void searchList()
     {
         System.out.println("\n Please enter Product Details:");
@@ -153,6 +169,9 @@ public class StockApp
         manager.printPartialName(details);
     }
     
+    /** 
+     * increases stock amount by a specified value
+     */
     private void takeDelivery()
     {
         int id = getPoductID();
@@ -161,6 +180,9 @@ public class StockApp
         manager.delivery(id, amount);
     }
     
+    /** 
+     * reduces stock amount by a specified value, based on sales
+     */
     private void sellProduct()
     {
         int id = getPoductID();
@@ -176,6 +198,10 @@ public class StockApp
         }
     }
     
+    /** 
+     * takes users input and converts to an ID.
+     * Then Returns ID for a getProduct method
+     */
     public int getPoductID()
     {
         System.out.println("\n Please enter product ID:");
@@ -184,6 +210,9 @@ public class StockApp
         return id;
     }
     
+    /** 
+     * gets user input and converts to integer for a stock level method
+     */
     public int getMinStockLevel()
     {
         System.out.println("\n Please enter minimum stock level:");
@@ -192,6 +221,9 @@ public class StockApp
         return level;
     }
     
+    /** 
+     * gets user input to find a quantity for use in several methods
+     */
     public int getProductQuantity()
     {
         System.out.println("\n Please enter Quantity:");
@@ -229,6 +261,9 @@ public class StockApp
         System.out.println("==============================");
     }
     
+    /** 
+     * unlisted method for testing perposes. loads demo products to stock list
+     */
     private void Demo()
     {
         demo = new StockDemo(manager);

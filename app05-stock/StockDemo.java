@@ -3,17 +3,7 @@
  * The demonstration becomes properly functional as
  * the StockManager class is completed.
  * 
- * @author David J. Barnes and Michael Kölling.
- * @version 2016.02.29
- * 
- * Added demo for added features:
- * Print all products
- * Take delivery of products
- * Sell Products
- * Rename products based on the product ID
- * remove products from the stock list
- * Search for a product with only some of the information
- * list stock with low quantity
+ * Allows testing of stock app without requireing exsesive user input
  * 
  * @author Will Deeley
  * @version 2020.11.07
@@ -27,7 +17,7 @@ public class StockDemo
 
     /**
      * Create a StockManager and populate it with a few
-     * sample products.
+     * sample products. for testing purposes only
      */
     public StockDemo(StockManager manager)
     {

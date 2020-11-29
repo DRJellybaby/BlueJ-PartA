@@ -94,6 +94,9 @@ public class StockManager
         return null;
     }
 
+    /**
+     * Checks if a new ID currently exsists, and returns appropriate value
+     */
     public boolean chackDuplicateID(int id)
     {
         Product product = findProduct(id);
@@ -151,6 +154,9 @@ public class StockManager
         }
     }
 
+    /**
+     * restock productes below a specified amount, by a specified amount
+     */
     public void restockLowStock(int level, int amount)
     {
         for (Product product : stockList)
