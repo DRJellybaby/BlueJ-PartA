@@ -1,0 +1,377 @@
+Program.main();
+==============================
+ Stock Management Application 
+    App05: by Will Deeley     
+==============================
+=======================================================
+
+    Add:         Add a new product
+    Remove:      Remove an old product
+    PrintAll:    Print all products
+    Search:      Search product list for products
+    LowStock:    list stock below the given level
+    Restock:     Change the minimum stock level
+    Delivery:    Increase the stock level of a product
+    Sell:        Sell product from stock
+    Quit:        Quit the program
+
+> add
+
+ Please enter Product Details:
+
+ Product Name:
+> Samsung Galaxy S10
+
+ Product ID:
+> 111
+=======================================================
+
+    Add:         Add a new product
+    Remove:      Remove an old product
+    PrintAll:    Print all products
+    Search:      Search product list for products
+    LowStock:    list stock below the given level
+    Restock:     Change the minimum stock level
+    Delivery:    Increase the stock level of a product
+    Sell:        Sell product from stock
+    Quit:        Quit the program
+
+> add
+
+ Please enter Product Details:
+
+ Product Name:
+> Samsung Galaxy S10 FE
+
+ Product ID:
+> 112
+=======================================================
+
+    Add:         Add a new product
+    Remove:      Remove an old product
+    PrintAll:    Print all products
+    Search:      Search product list for products
+    LowStock:    list stock below the given level
+    Restock:     Change the minimum stock level
+    Delivery:    Increase the stock level of a product
+    Sell:        Sell product from stock
+    Quit:        Quit the program
+
+> add
+
+ Please enter Product Details:
+
+ Product Name:
+> Apple iPhone 9
+
+ Product ID:
+> 113
+=======================================================
+
+    Add:         Add a new product
+    Remove:      Remove an old product
+    PrintAll:    Print all products
+    Search:      Search product list for products
+    LowStock:    list stock below the given level
+    Restock:     Change the minimum stock level
+    Delivery:    Increase the stock level of a product
+    Sell:        Sell product from stock
+    Quit:        Quit the program
+
+> add
+
+ Please enter Product Details:
+
+ Product Name:
+> Apple iPhone 12
+
+ Product ID:
+> 114
+=======================================================
+
+    Add:         Add a new product
+    Remove:      Remove an old product
+    PrintAll:    Print all products
+    Search:      Search product list for products
+    LowStock:    list stock below the given level
+    Restock:     Change the minimum stock level
+    Delivery:    Increase the stock level of a product
+    Sell:        Sell product from stock
+    Quit:        Quit the program
+
+> add
+
+ Please enter Product Details:
+
+ Product Name:
+> Motorola G9 Plus
+
+ Product ID:
+> 115
+=======================================================
+
+    Add:         Add a new product
+    Remove:      Remove an old product
+    PrintAll:    Print all products
+    Search:      Search product list for products
+    LowStock:    list stock below the given level
+    Restock:     Change the minimum stock level
+    Delivery:    Increase the stock level of a product
+    Sell:        Sell product from stock
+    Quit:        Quit the program
+
+> add
+
+ Please enter Product Details:
+
+ Product Name:
+> New Product
+
+ Product ID:
+> 103
+ID already exsists
+=======================================================
+
+    Add:         Add a new product
+    Remove:      Remove an old product
+    PrintAll:    Print all products
+    Search:      Search product list for products
+    LowStock:    list stock below the given level
+    Restock:     Change the minimum stock level
+    Delivery:    Increase the stock level of a product
+    Sell:        Sell product from stock
+    Quit:        Quit the program
+
+> add
+
+ Please enter Product Details:
+
+ Product Name:
+> 
+Name cannot be blank
+=======================================================
+
+    Add:         Add a new product
+    Remove:      Remove an old product
+    PrintAll:    Print all products
+    Search:      Search product list for products
+    LowStock:    list stock below the given level
+    Restock:     Change the minimum stock level
+    Delivery:    Increase the stock level of a product
+    Sell:        Sell product from stock
+    Quit:        Quit the program
+
+> remove
+
+ Please enter product ID:
+> 113
+Product ID: 113 removed from stock list
+=======================================================
+
+    Add:         Add a new product
+    Remove:      Remove an old product
+    PrintAll:    Print all products
+    Search:      Search product list for products
+    LowStock:    list stock below the given level
+    Restock:     Change the minimum stock level
+    Delivery:    Increase the stock level of a product
+    Sell:        Sell product from stock
+    Quit:        Quit the program
+
+> remove
+
+ Please enter product ID:
+> 203
+
+No item with ID: 203 exsists
+---------------------
+---------------------
+---------------------
+=======================================================
+
+    Add:         Add a new product
+    Remove:      Remove an old product
+    PrintAll:    Print all products
+    Search:      Search product list for products
+    LowStock:    list stock below the given level
+    Restock:     Change the minimum stock level
+    Delivery:    Increase the stock level of a product
+    Sell:        Sell product from stock
+    Quit:        Quit the program
+
+> printall
+====================
+W Deeley's Stock List
+====================
+101: Samsung Galaxy S20 stock level: 0
+102: Samsung Galaxy S20 FE stock level: 0
+103: Apple iPhone 12 stock level: 0
+104: Google Pixel 4A stock level: 0
+105: Samsung Galaxy S7 stock level: 0
+106: Apple iPhone 11 stock level: 0
+107: Apple iPhone X stock level: 0
+108: Samsung Galaxy S9 stock level: 0
+109: Samsung Galaxy S10 stock level: 0
+110: Google Pixel 5 stock level: 0
+111: Samsung Galaxy S10 stock level: 0
+112: Samsung Galaxy S10 FE stock level: 0
+114: Apple iPhone 12 stock level: 0
+115: Motorola G9 Plus stock level: 0
+=======================================================
+
+    Add:         Add a new product
+    Remove:      Remove an old product
+    PrintAll:    Print all products
+    Search:      Search product list for products
+    LowStock:    list stock below the given level
+    Restock:     Change the minimum stock level
+    Delivery:    Increase the stock level of a product
+    Sell:        Sell product from stock
+    Quit:        Quit the program
+
+> delivery
+
+ Please enter product ID:
+> 112
+
+ Please enter Quantity:
+> 8
+8 Samsung Galaxy S10 FE delivered
+=======================================================
+
+    Add:         Add a new product
+    Remove:      Remove an old product
+    PrintAll:    Print all products
+    Search:      Search product list for products
+    LowStock:    list stock below the given level
+    Restock:     Change the minimum stock level
+    Delivery:    Increase the stock level of a product
+    Sell:        Sell product from stock
+    Quit:        Quit the program
+
+> delivery
+
+ Please enter product ID:
+> 112
+
+ Please enter Quantity:
+> -4
+Attempt to restock Samsung Galaxy S10 FE with a non-positive amount: -4
+=======================================================
+
+    Add:         Add a new product
+    Remove:      Remove an old product
+    PrintAll:    Print all products
+    Search:      Search product list for products
+    LowStock:    list stock below the given level
+    Restock:     Change the minimum stock level
+    Delivery:    Increase the stock level of a product
+    Sell:        Sell product from stock
+    Quit:        Quit the program
+
+> sell
+
+ Please enter product ID:
+> 112
+
+ Please enter Quantity:
+> 2
+2 Samsung Galaxy S10 FE Sold
+=======================================================
+
+    Add:         Add a new product
+    Remove:      Remove an old product
+    PrintAll:    Print all products
+    Search:      Search product list for products
+    LowStock:    list stock below the given level
+    Restock:     Change the minimum stock level
+    Delivery:    Increase the stock level of a product
+    Sell:        Sell product from stock
+    Quit:        Quit the program
+
+> sell
+
+ Please enter product ID:
+> 112
+
+ Please enter Quantity:
+> 10
+Not enough of the item: Samsung Galaxy S10 FE
+current stock is: 6
+4 more required
+=======================================================
+
+    Add:         Add a new product
+    Remove:      Remove an old product
+    PrintAll:    Print all products
+    Search:      Search product list for products
+    LowStock:    list stock below the given level
+    Restock:     Change the minimum stock level
+    Delivery:    Increase the stock level of a product
+    Sell:        Sell product from stock
+    Quit:        Quit the program
+
+> search
+
+ Please enter Product Details:
+
+ Product Name:
+> Samsung
+====================
+W Deeley's Stock List
+====================
+Products containing 'Samsung':
+------------------------------------------
+101: Samsung Galaxy S20 stock level: 0
+102: Samsung Galaxy S20 FE stock level: 0
+105: Samsung Galaxy S7 stock level: 0
+108: Samsung Galaxy S9 stock level: 0
+109: Samsung Galaxy S10 stock level: 0
+111: Samsung Galaxy S10 stock level: 0
+112: Samsung Galaxy S10 FE stock level: 6
+=======================================================
+
+    Add:         Add a new product
+    Remove:      Remove an old product
+    PrintAll:    Print all products
+    Search:      Search product list for products
+    LowStock:    list stock below the given level
+    Restock:     Change the minimum stock level
+    Delivery:    Increase the stock level of a product
+    Sell:        Sell product from stock
+    Quit:        Quit the program
+
+> lowstock
+
+ Please enter minimum stock level:
+> 2
+====================
+W Deeley's Stock List
+Low Stock (under 2)
+====================
+101: Samsung Galaxy S20 stock level: 0
+102: Samsung Galaxy S20 FE stock level: 0
+103: Apple iPhone 12 stock level: 0
+104: Google Pixel 4A stock level: 0
+105: Samsung Galaxy S7 stock level: 0
+106: Apple iPhone 11 stock level: 0
+107: Apple iPhone X stock level: 0
+108: Samsung Galaxy S9 stock level: 0
+109: Samsung Galaxy S10 stock level: 0
+110: Google Pixel 5 stock level: 0
+111: Samsung Galaxy S10 stock level: 0
+114: Apple iPhone 12 stock level: 0
+115: Motorola G9 Plus stock level: 0
+=======================================================
+
+    Add:         Add a new product
+    Remove:      Remove an old product
+    PrintAll:    Print all products
+    Search:      Search product list for products
+    LowStock:    list stock below the given level
+    Restock:     Change the minimum stock level
+    Delivery:    Increase the stock level of a product
+    Sell:        Sell product from stock
+    Quit:        Quit the program
+
+> quit

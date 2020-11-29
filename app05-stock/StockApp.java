@@ -12,7 +12,7 @@ public class StockApp
     // Use to get user input
     private InputReader input;
     private StockManager manager;
-    private StockDemo demo;
+    private StockDemo demo;    
     
     /**
      * Constructor for objects of class StockApp
@@ -21,7 +21,6 @@ public class StockApp
     {
         input = new InputReader();
         manager = new StockManager();
-        demo = new StockDemo(manager);
     }
 
     /**
@@ -87,6 +86,10 @@ public class StockApp
         else if (choice.equals("SELL"))
         {
             sellProduct();
+        }
+        else if (choice.equals("DEMO"))
+        {
+            Demo();
         }
     }
     
@@ -202,8 +205,8 @@ public class StockApp
      */
     private void printMenuChoices()
     {
-        System.out.println();
-        System.out.println("    Add:         Add a new product");
+        System.out.println("=======================================================");
+        System.out.println("\n    Add:         Add a new product");
         System.out.println("    Remove:      Remove an old product");
         System.out.println("    PrintAll:    Print all products");
         System.out.println("    Search:      Search product list for products");
@@ -224,5 +227,10 @@ public class StockApp
         System.out.println(" Stock Management Application ");
         System.out.println("    App05: by Will Deeley     ");
         System.out.println("==============================");
+    }
+    
+    private void Demo()
+    {
+        demo = new StockDemo(manager);
     }
 }
